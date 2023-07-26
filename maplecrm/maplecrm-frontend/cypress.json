@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "loginUrl": "/auth/login",
+  "email": "admin@maplecrm.com",
+  "wrong-email": "nadinha@orkut.net",
+  "password": "saq123",
+  "wrong-password": "wrong",
+
+  "register": {
+    "url": "/auth/register"
+  }
+}

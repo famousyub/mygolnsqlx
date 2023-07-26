@@ -1,0 +1,46 @@
+<div class="side-menu">
+  <div class="brand mgt-small mgb-med">
+    <img src="/assets/images/logo.png" height="30px" alt="Logo"> 
+    <h2 class="brand__title">Maple CRM</h2>
+  </div>
+  <div class="profile mgb-med">
+      <img src="{{user.imageUrl  || '/assets/images/nouser.png'}}" height="50px" alt="avatar" class="profile__pic"> 
+      <h5 class="profile__name">{{user.name}}</h5>
+      <span class="text-muted">{{user.roles}}</span>
+  </div>
+  <ul class="menu">
+    <li class="menu__item" >
+      <a routerLink="/dashboard"  routerLinkActive="menu__item--link-active" class="menu__item--link">
+        <i-feather name="monitor"></i-feather>
+        <span class="menu__item--link-text">Dashboard</span>
+      </a>
+    </li>
+    <li class="menu__item" >
+      <a routerLink="/customers"  routerLinkActive="menu__item--link-active" class="menu__item--link">
+        <i-feather name="heart"></i-feather>
+        <span class="menu__item--link-text">Customers</span>
+      </a>
+    </li>
+    <li class="menu__item" >
+      <a routerLink="/products" routerLinkActive="menu__item--link-active" class="menu__item--link">
+          <i-feather name="tag"></i-feather>
+          <span class="menu__item--link-text">Products - TBD</span>
+        </a>
+    </li>
+    <li class="menu__item" >
+      <a routerLink="/orders" routerLinkActive="menu__item--link-active" class="menu__item--link">
+        <i-feather name="shopping-cart"></i-feather>
+        <span class="menu__item--link-text">Orders - TBD</span>
+      </a>
+    </li>
+
+    <li class="menu__item" *ngIf="user.roles.includes('ADMIN')">
+      <a routerLink="/users"  routerLinkActive="menu__item--link-active" class="menu__item--link">
+        <i-feather name="shield"></i-feather>
+        <span class="menu__item--link-text">Users</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- {{user|json}} -->
+</div>
